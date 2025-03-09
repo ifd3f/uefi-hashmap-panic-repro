@@ -1,0 +1,8 @@
+target
+result*
+.direnv
+
+esp
+*.iso
+*.fd
+*.log
