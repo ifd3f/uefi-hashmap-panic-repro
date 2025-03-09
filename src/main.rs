@@ -31,7 +31,9 @@ fn main() {
 
     // Attach panic hook so we can actually read the errors
     std::panic::set_hook(Box::new(|p| {
+        let backtrace = std::backtrace::Backtrace::capture();
         println!("{p}");
+        println!("{backtrace}");
         loop {
             boot::stall(1_000_000_000)
         }

@@ -5,7 +5,7 @@
 set -euxo pipefail
 
 # set up an esp
-cargo build --target x86_64-unknown-uefi --release
+cargo build --target x86_64-unknown-uefi
 rm -rf esp
 mkdir -p esp/efi/boot
 cp -r target/x86_64-unknown-uefi/release/uefi-std-example.efi esp/efi/boot/bootx64.efi
